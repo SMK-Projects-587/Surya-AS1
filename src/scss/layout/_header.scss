@@ -1,0 +1,107 @@
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 2rem;
+  background: #ffffff;
+
+  &__brand {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+    &-img {
+      height: 22px;
+    }
+
+    &-name {
+      width: 50px;
+      height: 23px;
+      font-family: Fraunces, sans-serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: #1c1b29;
+    }
+  }
+
+  &__links {
+    display: none;
+  }
+
+  &__links.is-open {
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 50px;
+    background: #ffffff;
+  }
+
+  &__button {
+    display: none;
+  }
+
+  &__link {
+    width: 42px;
+    height: 18px;
+    font-family: Inter, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #6b6980;
+  }
+
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #1c1b29;
+    }
+  }
+
+  @media (width >= 768px) {
+    &__brand-img {
+      width: 22px;
+    }
+
+    &__brand-name {
+      width: 55px;
+      height: 26px;
+    }
+
+    &__links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 44px;
+      font-family: Inter, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #ffffff;
+      background: #5b4be1;
+      border-radius: 1.2rem;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+  }
+}
