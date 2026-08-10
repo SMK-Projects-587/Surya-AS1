@@ -3,9 +3,10 @@
 // Import order: abstracts (no CSS output) → vendors → base → layout → components → pages → themes
 
 // 1. Abstracts
-// @use 'abstracts/variables' as *;
+@use 'abstracts/variables' as *;
+
 // @use 'abstracts/functions' as *;
-// @use 'abstracts/mixins' as *;
+@use 'abstracts/mixins' as *;
 
 // 2. Vendors
 // @use 'vendors/index';

@@ -1,31 +1,40 @@
 /* Modern CSS Reset */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
   hanging-punctuation: first last;
+  font-size: 62.5%;
 }
 
 body {
+  min-height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   color: inherit;
 }
@@ -36,7 +45,13 @@ button {
   border: none;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -44,7 +59,8 @@ textarea {
   resize: vertical;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -54,13 +70,11 @@ a {
 }
 
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
-#root, #__next {
+#root,
+#next {
   isolation: isolate;
-}
-html{
-    font-size: 62.5%;
 }
