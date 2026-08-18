@@ -1,10 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-body {
-  font-family: $font-body;
-}
-
 .navbar {
   position: relative;
   background: $color-bg;
@@ -30,7 +26,7 @@ body {
     }
 
     &-name {
-      font-family: $font-body;
+      font-family: $font-brand;
       font-size: 1.9rem;
       font-weight: $font-weight;
       color: $color-text-dark;
@@ -142,6 +138,7 @@ body {
       justify-content: center;
       width: 15rem;
       height: 4.4rem;
+      font-size: 1.4rem;
       font-size: $mobile-view-padding;
       font-weight: $font-weight;
       color: $color-bg;
