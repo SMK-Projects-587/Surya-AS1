@@ -2,11 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .navbar {
-  position: relative;
   background: $color-bg;
 
   &__container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;

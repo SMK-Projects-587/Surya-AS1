@@ -1,13 +1,21 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+/* HERO-----SECTION */
+.main {
+  width: 100%;
+  background: #fbfaf9;
+}
+
 .hero {
   &__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 1600px;
+    width: 100%;
+    max-width: 1920px;
     padding: 2rem 3rem;
+    margin: 0 auto;
   }
 
   &__eyebrow {
@@ -49,7 +57,7 @@
 
     &--secondary {
       color: $color-text-dark;
-      background: #fbfaf9;
+      background-color: #fbfaf9;
       border: 1px solid #eceaf3;
     }
   }
@@ -130,6 +138,97 @@
 
     &__icon {
       display: flex;
+    }
+  }
+}
+
+/* BROWSE-----SECTION */
+.browse {
+  width: 100%;
+  background-color: #ffffff;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1920px;
+    padding: 2rem;
+    margin: 0 auto;
+    border: 2px solid #ffffff;
+  }
+
+  &__heading {
+    font-family: $font-brand;
+    font-size: 2rem;
+    font-weight: $font-weight;
+    color: #1c1b29;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1.6rem));
+    gap: 1rem;
+    width: 100%;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2rem;
+    font-weight: $font-weight;
+    background: #fbfaf9;
+    border: 1px solid #eceaf3;
+    border-radius: 1rem;
+  }
+
+  &__card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    font-family: $font-brand;
+    font-size: 1.8rem;
+    color: #392e97;
+    background-color: #f1effd;
+    border-radius: 1rem;
+  }
+
+  &__card-name {
+    margin: 0.4rem 0 0 0;
+    font-family: $font-body;
+    font-size: 1.6rem;
+    color: $color-text-dark;
+  }
+
+  &__card-count {
+    margin: 0;
+    font-size: 1.2rem;
+    color: $font-color-author;
+  }
+
+  @include desktop {
+    &__container {
+      gap: 2rem;
+      padding: 2rem 4rem;
+    }
+
+    &__heading {
+      font-size: 3.2rem;
+    }
+
+    &__box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    &__card {
+      width: 100%;
     }
   }
 }
