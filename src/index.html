@@ -3,10 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <title>Project</title>
+    <meta
+      name="description"
+      content="A Daily Quotes Website which contains collection of quotes depending on your mood."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Project-VERSE</title>
   </head>
+
   <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="" class="navbar__brand">
+          <img src="./assets/logo.svg" alt="Verse" class="navbar__brand-img" />
+          <span class="navbar__brand-name"> Verse</span>
+        </a>
+        <ul class="navbar__links">
+          <li><a href="#" class="navbar__link">Home</a></li>
+          <li><a href="#" class="navbar__link">Explore</a></li>
+          <li><a href="#" class="navbar__link">About</a></li>
+        </ul>
+        <a href="#" class="navbar__button">Get Inspired</a>
+        <button class="navbar__hamburger" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <span class="hero__eyebrow">DAILY WISDOM</span>
+            <h1 class="hero__heading">Words that move you.</h1>
+            <p class="hero__desc">
+              A hand-picked quote to start your morning, plus a library to explore when you need a
+              lift.
+            </p>
+            <div class="hero__action">
+              <button class="hero__button hero__button--primary">Get Inspired</button>
+              <button class="hero__button hero__button--secondary">Browse all</button>
+            </div>
+          </div>
+          <div class="hero__card">
+            <img class="hero__icon" src="./assets/image.png" alt="hero-icon" />
+            <figure class="hero__quote">
+              <blockquote class="hero__quote-text">The best way out is always through.</blockquote>
+              <figcaption class="hero__quote-author">—Robert Frost</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="browse">
+        <div class="browse__container">
+          <h2 class="browse__heading">Browse By Mood</h2>
+          <div class="browse__box">
+            <div class="browse__card">
+              <span class="browse__card-icon">M</span>
+              <p class="browse__card-name">Motivation</p>
+              <p class="browse__card-count">128 quotes</p>
+            </div>
+            <div class="browse__card">
+              <span class="browse__card-icon">W</span>
+              <p class="browse__card-name">Wisdom</p>
+              <p class="browse__card-count">96 quotes</p>
+            </div>
+            <div class="browse__card">
+              <span class="browse__card-icon">H</span>
+              <p class="browse__card-name">Humour</p>
+              <p class="browse__card-count">74 quotes</p>
+            </div>
+            <div class="browse__card">
+              <span class="browse__card-icon">L</span>
+              <p class="browse__card-name">Love</p>
+              <p class="browse__card-count">52 quotes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fquotes">
+        <div class="fquotes__container">
+          <div class="fquotes__header">
+            <h2 class="fquotes__heading">Fresh Quotes</h2>
+            <button class="fquotes__button">⟳ Shuffle</button>
+          </div>
+          <div class="fquotes__cards"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <div class="footer__content">
+            <a href="#" class="footer__brand">
+              <img src="./assets/logo.svg" alt="Brand logo" class="footer__brand-icon" />
+              <span class="footer__brand-name"> Verse</span>
+            </a>
+            <p class="footer__caption">A little wisdom, every day</p>
+          </div>
+          <nav class="footer__nav" aria-label="Footer">
+            <div class="footer__group">
+              <h3 class="footer__heading">Product</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Explore</a></li>
+                <li class="footer__item footer__item--desktop">
+                  <a href="#" class="footer__link">Categories</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__group">
+              <h3 class="footer__heading">Company</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                <li class="footer__item footer__item--desktop">
+                  <a href="#" class="footer__link">Contact</a>
+                </li>
+                <li class="footer__item footer__item--desktop">
+                  <a href="#" class="footer__link">Privacy</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <p class="footer__copyright">&copy; 2026 Verse. A training project.</p>
+      </div>
+    </footer>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

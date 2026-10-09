@@ -1,0 +1,127 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+  background: $background-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem 2.4rem;
+    border-top: $card-border;
+  }
+
+  &__brand {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    &-name {
+      font-family: $font-brand;
+      font-size: 1.8rem;
+      font-weight: $font-weight;
+      color: $color-text-dark;
+    }
+  }
+
+  &__caption {
+    display: none;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__heading {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__item {
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 1.2rem;
+    font-weight: $font-weight;
+    color: $font-color-author;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__copyright {
+    font-family: $font-body;
+    font-size: 1.2rem;
+    font-weight: $font-weight;
+    color: $font-color-author;
+  }
+}
+
+@include desktop {
+  .footer {
+    &__container {
+      padding: 1.2rem 2.4rem;
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: $card-border;
+    }
+
+    &__content {
+      gap: 0.2rem;
+    }
+
+    &__nav {
+      gap: 6rem;
+      padding: 1.2rem 14rem;
+    }
+
+    &__brand-name {
+      font-size: 1.8rem;
+    }
+
+    &__caption {
+      display: flex;
+      font-family: $font-body;
+      font-size: 1.2rem;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__heading {
+      display: block;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      &:hover {
+        color: $color-accent;
+      }
+
+      &--desktop {
+        display: list-item;
+      }
+    }
+  }
+}
