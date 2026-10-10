@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Daily Quotes Website which contains collection of quotes depending on your mood."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Project-VERSE</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="" class="navbar__brand">
+          <img src="./assets/logo.svg" alt="Verse" class="navbar__brand-img" />
+          <span class="navbar__brand-name"> Verse</span>
+        </a>
+        <ul class="navbar__links">
+          <li><a href="#" class="navbar__link">Home</a></li>
+          <li><a href="#" class="navbar__link">Explore</a></li>
+          <li><a href="#" class="navbar__link">About</a></li>
+        </ul>
+        <a href="#" class="navbar__button">Get Inspired</a>
+        <button class="navbar__hamburger" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <span class="hero__eyebrow">DAILY WISDOM</span>
+            <h1 class="hero__heading">Words that move you.</h1>
+            <p class="hero__desc">
+              A hand-picked quote to start your morning, plus a library to explore when you need a
+              lift.
+            </p>
+            <div class="hero__action">
+              <button class="hero__button hero__button--primary">Get Inspired</button>
+              <button class="hero__button hero__button--secondary">Browse all</button>
+            </div>
+          </div>
+          <div class="hero__card">
+            <img class="hero__icon" src="./assets/image.png" alt="hero-icon" />
+            <figure class="hero__quote">
+              <blockquote class="hero__quote-text">The best way out is always through.</blockquote>
+              <figcaption class="hero__quote-author">—Robert Frost</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
