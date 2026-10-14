@@ -1,0 +1,153 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+  font-family: $font-body;
+}
+
+.navbar {
+  position: relative;
+  background: $color-bg;
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    padding: $navbar-padding;
+    margin: 0 auto;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__brand {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+    &-img {
+      height: 2.2rem;
+    }
+
+    &-name {
+      font-family: $font-body;
+      font-size: 1.8rem;
+      font-weight: $font-weight;
+      color: $color-text-dark;
+    }
+  }
+
+  &__links {
+    display: none;
+  }
+
+  &__links.is-open {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding: $navbar-padding;
+    background: $color-bg;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &__button {
+    display: none;
+  }
+
+  &__links.is-open ~ &__button {
+    position: fixed;
+    right: 2rem;
+    bottom: 3.2rem;
+    left: 2rem;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $mobile-view-padding;
+    font-size: 1.4rem;
+    color: $color-bg;
+    text-decoration: none;
+    background: $color-accent;
+    border-radius: 1.2rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: $font-weight;
+    line-height: 1;
+    color: $color-text;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__hamburger {
+    position: relative;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    &-line {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: $color-text-dark;
+    }
+
+    &.is-active &-line:nth-child(1) {
+      transform: translateY(0.8rem) rotate(45deg);
+    }
+
+    &.is-active &-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.is-active &-line:nth-child(3) {
+      transform: translateY(-0.4rem) rotate(-48deg);
+    }
+  }
+
+  @include desktop {
+    &__brand-img {
+      width: 2.2rem;
+    }
+
+    &__brand-name {
+      font-size: 2rem;
+    }
+
+    &__links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $mobile-view-padding;
+      font-weight: $font-weight;
+      color: $color-bg;
+      background: $color-accent;
+      border-radius: 1.2rem;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+  }
+}
