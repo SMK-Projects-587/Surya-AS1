@@ -11,11 +11,17 @@
   &__container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    gap: 2rem;
     max-width: 1920px;
-    padding: 2rem 3rem;
+    padding: 1.6rem 2rem;
     margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
   }
 
   &__eyebrow {
@@ -25,16 +31,16 @@
 
   &__heading {
     font-family: $font-brand;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: $font-weight;
+    line-height: 1;
     color: $color-text-dark;
   }
 
   &__desc {
     max-width: 30rem;
-    padding: 0.2rem;
     font-size: 1.4rem;
-    color: #6b6980;
+    color: $font-color-author;
   }
 
   &__action {
@@ -44,9 +50,7 @@
 
   &__button {
     display: inline-flex;
-    justify-content: space-between;
-    padding: 1.4rem 3.2rem;
-    margin-top: 1.2rem;
+    padding: 1.2rem 2rem;
     font-size: 1.4rem;
     border-radius: 1.2rem;
 
@@ -57,8 +61,8 @@
 
     &--secondary {
       color: $color-text-dark;
-      background-color: #fbfaf9;
-      border: 1px solid #eceaf3;
+      background: #fbfaf9;
+      border: 1px solid $color-border;
     }
   }
 
@@ -67,38 +71,28 @@
   }
 
   &__card {
-    align-items: flex-start;
-    padding: 0.2rem 0;
-    margin-top: 1.2rem;
-    border: 1px solid #eceaf3;
-    border-radius: 0.8rem;
+    display: flex;
+    padding: 2rem;
+    border: 1px solid $color-border;
+    border-radius: 1.6rem;
   }
 
   &__quote {
-    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 42rem;
     font-family: $font-brand;
-    font-weight: 400;
-    color: $color-bg;
+    font-weight: $font-weight;
 
     &-text {
-      max-width: 36rem;
       font-size: $quote-font-size;
       color: $color-text-dark;
     }
 
-    @include desktop {
-      font-size: 2.8rem;
-    }
-
     &-author {
-      margin-top: 1rem;
       font-size: $author-font-size;
       color: $font-color-author;
-    }
-
-    @include desktop {
-      margin-top: 0.8rem;
-      font-size: 1.6rem;
     }
   }
 
@@ -116,7 +110,7 @@
     }
 
     &__heading {
-      width: 40rem;
+      max-width: 40rem;
       font-size: 5.4rem;
       line-height: 1;
     }
@@ -128,16 +122,29 @@
     }
 
     &__card {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
+      flex-direction: column;
+      gap: 2.4rem;
       width: 500px;
-      padding: 2rem;
-      border-radius: 1rem;
+      padding: 1.2rem 2.4rem;
+      border-radius: 1.2rem;
     }
 
     &__icon {
-      display: flex;
+      display: block;
+      align-self: flex-start;
+      width: 2.6rem;
+    }
+
+    &__quote {
+      justify-content: space-between;
+
+      &-text {
+        font-size: 2.8rem;
+      }
+
+      &-author {
+        font-size: 1.6rem;
+      }
     }
   }
 }
