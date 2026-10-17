@@ -151,14 +151,12 @@
 
 /* BROWSE-----SECTION */
 .browse {
-  width: 100%;
-  background-color: #ffffff;
+  background-color: $color-bg;
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     max-width: 1920px;
     padding: 2rem;
     margin: 0 auto;
@@ -169,44 +167,43 @@
     font-family: $font-brand;
     font-size: 2rem;
     font-weight: $font-weight;
-    color: #1c1b29;
+    color: $color-text-dark;
   }
 
   &__box {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1.6rem));
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
     width: 100%;
   }
 
   &__card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 100%;
+    gap: 0.4rem;
+    justify-content: space-between;
     padding: 2rem;
     font-weight: $font-weight;
     background: #fbfaf9;
-    border: 1px solid #eceaf3;
-    border-radius: 1rem;
+    border: 1px solid $color-border;
+    border-radius: 1.4rem;
   }
 
   &__card-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    margin-bottom: 1.2rem;
+    width: 4rem;
+    height: 4rem;
     font-family: $font-brand;
     font-size: 1.8rem;
-    color: #392e97;
+    color: $icon-color;
     background-color: #f1effd;
-    border-radius: 1rem;
+    border-radius: 1.2rem;
   }
 
   &__card-name {
-    margin: 0.4rem 0 0 0;
+    margin: 0;
     font-family: $font-body;
     font-size: 1.6rem;
     color: $color-text-dark;
@@ -232,10 +229,6 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
-    }
-
-    &__card {
-      width: 100%;
     }
   }
 }
