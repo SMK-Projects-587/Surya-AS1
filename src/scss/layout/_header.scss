@@ -52,7 +52,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  &__button {
+  &__button.button {
     display: none;
   }
 
@@ -132,17 +132,8 @@
       gap: 2rem;
     }
 
-    &__button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 16rem;
-      height: 4.4rem;
-      font-size: 1.4rem;
-      font-weight: $font-weight;
-      color: $color-bg;
-      background: $color-accent;
-      border-radius: 1.2rem;
+    &__button.button {
+      display: inline-flex;
     }
 
     &__hamburger {

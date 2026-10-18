@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+
+.button {
+  display: inline-flex;
+  padding: 1.2rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 1.2rem;
+
+  &--primary {
+    color: $color-bg;
+    background: $color-accent;
+  }
+
+  &--secondary {
+    color: $color-text-dark;
+    background: #fbfaf9;
+    border: 1px solid $color-border;
+  }
+}
