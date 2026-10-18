@@ -18,7 +18,7 @@
 // @use 'base/base';
 
 // 4. Layout
-@use 'layout/grid';
+// @use 'layout/grid';
 @use 'layout/header';
 
 // @use 'layout/footer';
@@ -27,7 +27,7 @@
 // @use 'components/buttons';
 
 // 6. Pages
-// @use 'pages/home';
+@use 'pages/home';
 
 // 7. Themes
 // @use 'themes/default';
