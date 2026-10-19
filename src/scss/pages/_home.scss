@@ -245,17 +245,6 @@
     color: $color-text-dark;
   }
 
-  &__button {
-    padding: 1rem 2rem;
-    font-family: $font-body;
-    font-size: 1.2rem;
-    font-weight: $font-weight;
-    color: $color-genre;
-    background: $color-bg;
-    border: $card-border;
-    border-radius: 1rem;
-  }
-
   &__cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -330,7 +319,7 @@
     font-family: $font-body;
     font-size: 1.2rem;
     font-weight: $font-weight;
-    color: $color-genre;
+    color: #4a3bc4;
     background: #f1effd;
     border-radius: 0.8rem;
   }
@@ -382,12 +371,6 @@
 
     &__heading {
       font-size: 3.2rem;
-    }
-
-    &__button {
-      padding: 1.2rem 2.4rem;
-      font-size: 1.4rem;
-      border-radius: 1.2rem;
     }
 
     &__cards {

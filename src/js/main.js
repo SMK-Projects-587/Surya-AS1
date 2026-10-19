@@ -7,7 +7,7 @@ hamburger.addEventListener('click', function () {
 });
 //----- FRESH-QUOTES ---
 const cardContainer = document.querySelector('.fquotes__cards');
-const shufflebtn = document.querySelector('.fquotes__button');
+const shufflebtn = document.querySelector('.button--shuffle');
 const genres = ['motivation', 'life', 'wisdom', 'success'];
 function createQuoteCard(quote) {
   const card = document.createElement('figure');
