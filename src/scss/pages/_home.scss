@@ -1,0 +1,126 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1920px;
+    padding: 1.6rem 2rem;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+
+  &__eyebrow {
+    font-size: 1.2rem;
+    color: $color-accent;
+  }
+
+  &__heading {
+    font-family: $font-brand;
+    font-size: 2.8rem;
+    font-weight: $font-weight;
+    line-height: 1;
+    color: $color-text-dark;
+  }
+
+  &__desc {
+    max-width: 30rem;
+    font-size: 1.4rem;
+    color: $font-color-author;
+  }
+
+  &__action {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__card {
+    display: flex;
+    padding: 2rem;
+    border: 1px solid $color-border;
+    border-radius: 1.6rem;
+  }
+
+  &__quote {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 42rem;
+    font-family: $font-brand;
+    font-weight: $font-weight;
+
+    &-text {
+      font-size: $quote-font-size;
+      color: $color-text-dark;
+    }
+
+    &-author {
+      font-size: $author-font-size;
+      color: $font-color-author;
+    }
+  }
+
+  @include desktop {
+    &__container {
+      flex-direction: row;
+      gap: 4rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 6rem;
+    }
+
+    &__content {
+      flex: 1;
+    }
+
+    &__heading {
+      max-width: 40rem;
+      font-size: 5.4rem;
+      line-height: 1;
+    }
+
+    &__desc {
+      max-width: 38rem;
+      margin-top: 1.6rem;
+      font-size: 1.8rem;
+    }
+
+    &__card {
+      flex-direction: column;
+      gap: 2.4rem;
+      width: 500px;
+      padding: 1.2rem 2.4rem;
+      border-radius: 1.2rem;
+    }
+
+    &__icon {
+      display: block;
+      align-self: flex-start;
+      width: 2.6rem;
+    }
+
+    &__quote {
+      justify-content: space-between;
+
+      &-text {
+        font-size: 2.8rem;
+      }
+
+      &-author {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
