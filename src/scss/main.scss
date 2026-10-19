@@ -18,15 +18,15 @@
 // @use 'base/base';
 
 // 4. Layout
-@use 'layout/grid';
+// @use 'layout/grid';
 @use 'layout/header';
 @use 'layout/footer';
 
 // 5. Components
-// @use 'components/buttons';
+@use 'components/button';
 
 // 6. Pages
-// @use 'pages/home';
+@use 'pages/home';
 
 // 7. Themes
 // @use 'themes/default';

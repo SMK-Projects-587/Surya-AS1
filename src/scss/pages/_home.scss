@@ -48,24 +48,6 @@
     gap: 4rem;
   }
 
-  &__button {
-    display: inline-flex;
-    padding: 1.2rem 2rem;
-    font-size: 1.4rem;
-    border-radius: 1.2rem;
-
-    &--primary {
-      color: $color-bg;
-      background: $color-accent;
-    }
-
-    &--secondary {
-      color: $color-text-dark;
-      background: #fbfaf9;
-      border: 1px solid $color-border;
-    }
-  }
-
   &__icon {
     display: none;
   }
@@ -158,6 +140,7 @@
   &__container {
     display: flex;
     flex-direction: column;
+    gap: 1.4rem;
     align-items: flex-start;
     max-width: 1920px;
     padding: 2rem;
@@ -223,7 +206,7 @@
 
   @include desktop {
     &__container {
-      gap: 2rem;
+      gap: 1.6rem;
       padding: 2rem 4rem;
     }
 
@@ -264,17 +247,6 @@
     font-size: 2rem;
     font-weight: $font-weight;
     color: $color-text-dark;
-  }
-
-  &__button {
-    padding: 1rem 2rem;
-    font-family: $font-body;
-    font-size: 1.2rem;
-    font-weight: $font-weight;
-    color: $color-genre;
-    background: $color-bg;
-    border: $card-border;
-    border-radius: 1rem;
   }
 
   &__cards {
@@ -351,7 +323,7 @@
     font-family: $font-body;
     font-size: 1.2rem;
     font-weight: $font-weight;
-    color: $color-genre;
+    color: #4a3bc4;
     background: #f1effd;
     border-radius: 0.8rem;
   }
@@ -403,12 +375,6 @@
 
     &__heading {
       font-size: 3.2rem;
-    }
-
-    &__button {
-      padding: 1.2rem 2.4rem;
-      font-size: 1.4rem;
-      border-radius: 1.2rem;
     }
 
     &__cards {
