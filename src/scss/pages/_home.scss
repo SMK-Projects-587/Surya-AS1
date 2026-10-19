@@ -1,6 +1,12 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+/* HERO-----SECTION */
+.main {
+  width: 100%;
+  background: #fbfaf9;
+}
+
 .hero {
   &__container {
     display: flex;
@@ -121,6 +127,91 @@
       &-author {
         font-size: 1.6rem;
       }
+    }
+  }
+}
+
+/* BROWSE-----SECTION */
+.browse {
+  background-color: $color-bg;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: flex-start;
+    max-width: 1920px;
+    padding: 2rem;
+    margin: 0 auto;
+    border: 2px solid #ffffff;
+  }
+
+  &__heading {
+    font-family: $font-brand;
+    font-size: 2rem;
+    font-weight: $font-weight;
+    color: $color-text-dark;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: space-between;
+    padding: 2rem;
+    font-weight: $font-weight;
+    background: #fbfaf9;
+    border: 1px solid $color-border;
+    border-radius: 1.4rem;
+  }
+
+  &__card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    font-family: $font-brand;
+    font-size: 1.8rem;
+    color: $icon-color;
+    background-color: #f1effd;
+    border-radius: 1.2rem;
+  }
+
+  &__card-name {
+    margin: 0;
+    font-family: $font-body;
+    font-size: 1.6rem;
+    color: $color-text-dark;
+  }
+
+  &__card-count {
+    margin: 0;
+    font-size: 1.2rem;
+    color: $font-color-author;
+  }
+
+  @include desktop {
+    &__container {
+      gap: 1.6rem;
+      padding: 2rem 4rem;
+    }
+
+    &__heading {
+      font-size: 3.2rem;
+    }
+
+    &__box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
     }
   }
 }
