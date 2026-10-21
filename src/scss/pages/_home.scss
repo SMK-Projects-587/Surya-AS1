@@ -172,6 +172,10 @@
     background: #fbfaf9;
     border: 1px solid $color-border;
     border-radius: 1.4rem;
+
+    &:hover {
+      color: $color-accent;
+    }
   }
 
   &__card-icon {
